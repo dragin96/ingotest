@@ -1,0 +1,81 @@
+*{
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	font-family: Ubuntu;
+	line-height: 1.428;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+body,ul,li {
+	padding: 0;
+	margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+}
+ul,li{
+	list-style: none;
+}
+
+.wrapper {
+	height: 100%;
+}
+
+.calc {
+	width: 600px;
+	height: 400px;
+	background-color: rgba(128, 128, 128, 0.7294117647058823);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+}
+.calc__form {
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	background-color: #808080b8;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.calc__str {
+	text-align: center;
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+}
+
+#postfix {
+	width: 400px;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+.button {
+	background-color: #F44336;
+	display: block;
+	margin: auto;
+	border: 0;
+	width: 140px;
+	padding: 20px;
+	border-radius: 5px;
+	font-size: 19px;
+	margin-bottom: 12px;
+	color: #fff;
+	cursor: pointer;
+}
+.button:active{
+	box-shadow: inset 0 0 4px #62130e;
+}
+.calc__print {
+	width: 95%;
+	/* padding: 10px; */
+}
