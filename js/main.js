@@ -213,3 +213,6 @@ function run(){
     document.getElementById("res").innerText="";
     document.getElementById("res").innerText=res;
 }
+window.onload=function(){
+ document.getElementById("postfix").value="((index-ex)-d)+gst*osr+(an+k+oh)/(n+o)";
+}
