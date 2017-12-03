@@ -94,7 +94,7 @@ function del(a,b){
 function parser(str){
     var stec = [],
     post = [],
-    inf = str.split(""),
+    inf = str,
     i = 0,
     status = 2,
     tmpStr="";
@@ -103,13 +103,13 @@ function parser(str){
         if(typeof inf[i]!= "undefined"){
                 if((!inf[i].match(/(\*|-|\+|\/|\(|\))/g))){//проверка что это не спец символ 
                     tmpStr = tmpStr + inf[i];
-                    if((inf[i+1].match(/(\*|-|\+|\/|\(|\))/g))){//след знак спец символ
+                    if((i+1==inf.length)||(inf[i+1].match(/(\*|-|\+|\/|\(|\))/g))){//след знак спец символ
                         post.push(tmpStr);
                         tmpStr="";
                     }
                     i++;
                 }
-                if(inf[i].match(/(\+|-)/)){//если + или -
+                else if(inf[i].match(/(\+|-)/)){//если + или -
                     if(first=="0" || first=="("){//пустой стек или скобка (
                         stec.push(inf[i]);
                         first = (stec.length)?stec[stec.length-1]:"0";;
@@ -213,6 +213,7 @@ function run(){
     document.getElementById("res").innerText="";
     document.getElementById("res").innerText=res;
 }
+
 window.onload=function(){
  document.getElementById("postfix").value="((index-ex)-d)+gst*osr+(an+k+oh)/(n+o)";
 }
